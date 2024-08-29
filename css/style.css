@@ -134,27 +134,33 @@
   padding-bottom: 3.2rem;
 }
 
-.my-work-main {
-  padding-top: 8.8rem;
+.my-work {
   display: flex;
+  gap: 3rem;
   overflow: scroll;
+  justify-content: center;
+  margin: 5.6rem 0;
 }
-.work-img {
+
+.my-work img {
+  border-radius: 1rem;
+}
+
+.arrow {
   display: flex;
-  overflow: scroll;
-  scroll-behavior: smooth;
-  gap: 30px;
-  max-width: 54rem;
-  max-height: 36rem;
+  gap: 3rem;
+  justify-content: center;
 }
-.my-work-main h3 {
-  font-size: var(--h3-fs);
-  line-height: var(--h3-ln);
-  color: var(--black-color);
-  text-transform: capitalize;
-  text-align: center;
-  padding-bottom: 5.6rem;
+
+.arrow img {
+  background-color: var(--black-color);
+  width: 4.4rem;
+  height: 4.4rem;
+  border-radius: 9rem;
+  padding: 1rem;
+  cursor: pointer;
 }
+
 /* responsivligi */
 @media (max-width: 1000px) {
   .grid-box {
