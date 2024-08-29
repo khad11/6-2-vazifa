@@ -1,0 +1,228 @@
+@import "./global.css";
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.4rem 1rem 6.6rem 1rem;
+}
+.navigation img {
+  cursor: pointer;
+}
+
+.grid-box {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+  grid-template-areas:
+    "gd gd ui ap ph ph"
+    "gd gd i i mg mg";
+  gap: 24px;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  border-radius: 10px;
+  padding: 2rem;
+}
+.grid-item img {
+  overflow: hidden;
+}
+.graphic-design {
+  background-color: var(--ink-color);
+  grid-area: gd;
+  gap: 94px;
+  width: 350px;
+}
+.ui-ux {
+  background-color: var(--yellow-color);
+  grid-area: ui;
+  gap: 14px;
+}
+.apps {
+  background-color: var(--pink-color);
+  grid-area: ap;
+  gap: 14px;
+}
+.photography {
+  background-color: var(--teal-color);
+  grid-area: ph;
+  gap: 14px;
+  width: 350px;
+}
+.illustrations {
+  background-color: var(--red-color);
+  grid-area: i;
+  gap: 14px;
+  width: 350px;
+}
+.motion-graphics {
+  background-color: var(--indigo-color);
+  grid-area: mg;
+  gap: 14px;
+}
+
+.grid-item h4 {
+  font-size: 2.4rem;
+  line-height: 3rem;
+  font-weight: 700;
+  color: var(--white-color);
+  align-items: start;
+}
+.graphic-design h4 {
+  padding-top: 25px;
+  margin-right: 120px;
+}
+.graphic-design img {
+  margin-right: 30px;
+}
+.ui-ux h4,
+.apps h4 {
+  padding-top: 3rem;
+  margin-right: 5rem;
+}
+.photography h4,
+.illustrations h4 {
+  padding-right: 14.8rem;
+  padding-top: 3rem;
+}
+.motion-graphics h4 {
+  padding-right: 10rem;
+  padding-top: 3rem;
+}
+.title-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 8rem;
+}
+.title-hero h1 {
+  font-size: var(--h1-fs);
+  line-height: var(--h1-ln);
+  color: var(--black-color);
+}
+.title-hero p {
+  font-size: var(--p-fs);
+  line-height: var(--p-ln);
+  color: var(--gray-color);
+  padding-top: 2.3rem;
+  max-width: 73rem;
+  text-align: center;
+}
+.amy-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 13.6rem;
+}
+
+.amy-title {
+  max-width: 54rem;
+}
+.amy-title h2 {
+  font-size: var(--h2-fs);
+  line-height: var(--h2-ln);
+  color: var(--black-color);
+  padding-bottom: 3.4rem;
+}
+.amy-title p {
+  font-size: var(--p-fs);
+  line-height: var(--p-ln);
+  color: var(--gray-color);
+  padding-bottom: 3.2rem;
+}
+
+.my-work-main {
+  padding-top: 8.8rem;
+  display: flex;
+  overflow: scroll;
+}
+.work-img {
+  display: flex;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  gap: 30px;
+  max-width: 54rem;
+  max-height: 36rem;
+}
+.my-work-main h3 {
+  font-size: var(--h3-fs);
+  line-height: var(--h3-ln);
+  color: var(--black-color);
+  text-transform: capitalize;
+  text-align: center;
+  padding-bottom: 5.6rem;
+}
+/* responsivligi */
+@media (max-width: 1000px) {
+  .grid-box {
+    display: grid;
+    margin: 0 auto;
+    grid-template-areas:
+      "gd gd ui ap"
+      "gd gd i i "
+      " ph ph mg mg";
+  }
+
+  .title-hero h1 {
+    font-size: 4.4rem;
+    line-height: 5.5rem;
+  }
+  .amy-main {
+    gap: 7rem;
+  }
+  .amy-title h2 {
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+  .main-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .right-footer {
+    padding-top: 2.6rem;
+  }
+}
+@media (max-width: 700px) {
+  .grid-box {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    width: 100%;
+    padding: 2.5rem;
+    max-width: 400px;
+    grid-template-areas:
+      "gd gd "
+      "gd gd "
+      "ui ap"
+      "i i"
+      " ph ph "
+      "mg mg";
+  }
+  /* .ui-ux {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+  .apps {
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+  .illustrations {
+    grid-column: 1/3;
+    grid-row: 5/6;
+  }
+  .motion-graphics {
+    grid-column: 1/2;
+    grid-row: 6/7;
+  } */
+  .amy-main {
+    flex-direction: column;
+    text-align: center;
+  }
+  .title-hero {
+    text-align: center;
+  }
+}
