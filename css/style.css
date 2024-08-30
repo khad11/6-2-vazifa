@@ -162,6 +162,7 @@
 }
 
 /* responsivligi */
+
 @media (max-width: 1000px) {
   .grid-box {
     display: grid;
@@ -171,7 +172,10 @@
       "gd gd i i "
       " ph ph mg mg";
   }
-
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
   .title-hero h1 {
     font-size: 4.4rem;
     line-height: 5.5rem;
@@ -207,6 +211,10 @@
       "i i"
       " ph ph "
       "mg mg";
+  }
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
   /* .ui-ux {
     grid-column: 1/2;
